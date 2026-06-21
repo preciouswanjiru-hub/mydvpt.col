@@ -12,6 +12,7 @@
     border-bottom: 2px solid #dfb76c;
     padding-bottom: 10px;
     text-align: center;
+    font-family: American Typewriter, sans-serif;
 }
 
 .sidebar {
@@ -108,8 +109,23 @@
     overflow: hidden; 
     border-radius: 6px;
 }
-.image_dining img {
-    width: 100%;
-    height: auto;
-    display: block;
+.top_picks {
+    margin-top: 30px;
+    padding: 30px 10%;
+    background-color: #7f6d49;
+    border-radius: 8px;
+    text-align: center;
+}
+.topicks_menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;                             
+    max-width: 1000px;                      
+    margin: 0 auto;
+}
+.topick img {
+    width: 100%;       
+    height: 250px;     
+    object-fit: cover; 
+    border-radius: 8px;
 }
