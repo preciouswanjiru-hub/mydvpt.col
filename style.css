@@ -129,3 +129,74 @@
     object-fit: cover; 
     border-radius: 8px;
 }
+.sidebar-about{
+    flex: 1;
+    min-width: 250px;
+    background-color: #f9f6f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+.main-content{
+     flex: 2;
+    min-width: 300px;
+}
+/* ==========================================================================
+   ABOUT TABS SYSTEM
+   ========================================================================== */
+
+/* 1. Hide the ugly circular radio inputs from the user interface */
+input[name="about-tabs"] {
+    display: none;
+}
+
+/* 2. Style the tab menu row and buttons */
+.tab-menus {
+    display: flex;
+    gap: 12px;
+    margin: 20px 0;
+    border-bottom: 2px solid #dfb76c;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.tab-menus label {
+    padding: 10px 16px;
+    background-color: #f5f2eb;
+    color: #1a1a1a;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tab-menus label:hover {
+    background-color: #dfb76c;
+}
+
+/* 3. Hide all content panels by default */
+.tab-contents .tab-content {
+    display: none;
+    background: #fff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    line-height: 1.7;
+}
+
+/* 4. THE MAGIC SWITCH: Show the content block when its matching radio is :checked */
+#tab-geo:checked ~ .tab-contents #content-geo,
+#tab-us:checked ~ .tab-contents #content-us,
+#tab-founder:checked ~ .tab-contents #content-founder,
+#tab-management:checked ~ .tab-contents #content-management {
+    display: block;
+}
+
+/* 5. VISUAL FEEDBACK: Turn the active label button gold when clicked */
+#tab-geo:checked ~ .tab-menus label[for="tab-geo"],
+#tab-us:checked ~ .tab-menus label[for="tab-us"],
+#tab-founder:checked ~ .tab-menus label[for="tab-founder"],
+#tab-management:checked ~ .tab-menus label[for="tab-management"] {
+    background-color: #dfb76c;
+    color: #fff;
+}
