@@ -174,7 +174,6 @@ input[name="about-tabs"] {
     background-color: #dfb76c;
 }
 
-/* 3. Hide all content panels by default */
 .tab-contents .tab-content {
     display: none;
     background: #fff;
@@ -184,7 +183,6 @@ input[name="about-tabs"] {
     line-height: 1.7;
 }
 
-/* 4. THE MAGIC SWITCH: Show the content block when its matching radio is :checked */
 #tab-geo:checked ~ .tab-contents #content-geo,
 #tab-us:checked ~ .tab-contents #content-us,
 #tab-founder:checked ~ .tab-contents #content-founder,
@@ -192,7 +190,6 @@ input[name="about-tabs"] {
     display: block;
 }
 
-/* 5. VISUAL FEEDBACK: Turn the active label button gold when clicked */
 #tab-geo:checked ~ .tab-menus label[for="tab-geo"],
 #tab-us:checked ~ .tab-menus label[for="tab-us"],
 #tab-founder:checked ~ .tab-menus label[for="tab-founder"],
