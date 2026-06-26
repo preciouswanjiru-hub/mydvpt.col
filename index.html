@@ -28,7 +28,7 @@
                     <li
                 </ul>
             </nav>
-            <h3 style="background-color: #dfb76c; padding: 14px 28px;border: none; border-radius: 4px; ">HOME</h3>
+            <h2>HOME</h2>
 
 
          
@@ -38,10 +38,72 @@
         
         <div class="main_content">
             <section class="banner">
+                <div class="banner-cont">
                 <h2>Where <span style="color: #dfb76c;">CULTURES</span> meet your plate</h2>
-                <img src="images/Diningchairs.jpg">
+            </div>
             </section>
+
+        <div class="grid">
+           <div class="about">
+            <h4>ABOUT US</h4>
+            <p>Every successful restaurant has an incredible history. Behind Fork & Knife we represent strong heritage. Click below to find
+             out more!</p>
+            <button class="about">About Us</button>
+            <script>
+               const aboutButton= document.querySelector('.about');
+               aboutButton.addEventListener('click' , function(){
+               window.location.href="about.html"; 
+               });
+               
+             </script>
+           </div>
+
+           <div class="menu">
+            <h4>OUR MENU</h4>
+            <p></p>
+            <button class="menu">Our Menu</button>
+            <script>
+                const menuButton= document.querySelector('.menu');
+               menuButton.addEventListener('click' , function(){
+               window.location.href="menu.html"; 
+               });
+            </script>
+           </div>
+
+           <div class="event">
+            <h4>EVENTS</h4>
+            <p></p>
+            <button class="event">Events</button>
+            <script>
+                const eventButton= document.querySelector('.event');
+                eventButton.addEventListener('click', function(){
+                    window.location.href="events.html";
+                });
+            </script>
+           </div>
+
+           <div class="reserve">
+            <h4>RESERVATIONS</h4>
+            <p></p>
+            <button class="reserve">Reserve</button>
+             <script>
+               const reserveButton= document.querySelector('.reserve');
+               reserveButton.addEventListener('click' , function(){
+               window.location.href="reservations.html"; 
+               });
+               
+             </script>
+           </div>
+
+
+
+
+
         </div>
+
+
+        </div>
+
 
        
     </div>
