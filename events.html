@@ -69,6 +69,66 @@
 
         </div>
         <div class="main-content">
+            <h3 class="events">Event Spaces: Virtual Tour</h3>
+
+            <div class="slideshow">
+
+              <div class="slide">
+                <img src="images\1000147952.jpg">
+                </div>
+              <div class="slide">
+                <img src="images\1000147952.jpg">
+                </div>
+                <div class="slide">
+                <img src="images\1000147953.jpg">
+                </div>
+                <div class="slide">
+                <img src="images\1000147954.jpg">
+                </div>
+                <div class="slide">
+                <img src="images\1000147955.jpg">
+                </div>
+                <div class="slide">
+                <img src="images\1000147958.jpg">
+                </div>
+                <div class="slide">
+                <img src="images\1000147959.jpg">
+                </div>
+                <div class="slide">
+                <img src="images\1000147960.jpg">
+                </div>
+
+            <button class="slide-prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="slide-next" onclick="changeSlide(1)">&#10095;</button>
+
+            <script>
+        
+let currentSlideIndex = 1;
+document.addEventListener("DOMContentLoaded", function() {
+    if (document.getElementsByClassName("slide").length > 0) {
+        showSlides(currentSlideIndex);
+    }
+});
+
+function changeSlide(n) {
+    showSlides(currentSlideIndex += n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    
+    if (n > slides.length) { currentSlideIndex = 1; }
+    if (n < 1) { currentSlideIndex = slides.length; }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    
+    slides[currentSlideIndex - 1].style.display = "block";  
+}
+            </script>
+
+            </div>
 
 
         </div>
