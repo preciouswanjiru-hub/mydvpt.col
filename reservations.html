@@ -116,7 +116,10 @@
                     </div>
 
                 </form>
-            </div> </div> </div> <script>
+            </div> 
+        </div> 
+        </div>
+             <script>
         const tabTable = document.getElementById('tab-table');
         const tabEvent = document.getElementById('tab-event');
         const tableBlock = document.getElementById('table-fields-block');
@@ -165,7 +168,8 @@
             const confirmedDate = isEventSelection ? eventDateInput.value : tableDateInput.value;
             const typeString = isEventSelection ? "Private Event Consultation" : "Dining Table Booking";
 
-            alert(`Success! Thank you, ${firstName}.\nYour registration request for a ${typeString} on ${confirmedDate} has been sent. We will review availability and message you back shortly!`);
+            alert(`Success! Thank you, ${firstName}.\nYour registration request for a ${typeString} on ${confirmedDate}
+             has been sent.`);
             
             masterForm.reset();
             enforceCurrentDates();
