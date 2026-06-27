@@ -328,4 +328,10 @@ input[name="about-tabs"] {
     position: relative;
     z-index: 10;
 }
-
+.logo img, .media-team img{
+   display: block;
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+   object-fit: cover; 
+}
