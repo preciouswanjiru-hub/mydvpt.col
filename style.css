@@ -147,7 +147,7 @@ margin: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
-.about-btn, .menu-btn, .event-btn, .reserve-btn{
+.about-btn, .menu-btn, .event-btn, .reserve-btn, .submit-btn, .table-btn, .events-btn{
     background-color: #dfb76c; 
     color: #1a1a1a;            
     font-size: 15px;

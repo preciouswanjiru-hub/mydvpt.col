@@ -37,33 +37,34 @@
                 <p><strong>Mon - Thu:</strong> 11:00 AM - 10:00 PM</p>
                 <p><strong>Fri - Sun:</strong> 11:00 AM - 11:00 PM</p>
             </div>
+            <div class="form-btns">
+                <h3>To book a table</h3>
+                <button id="tab-table" class="table-btn" type="button">Book a Table</button> <br>
+                <h3>To plan an event</h3>
+                <button id="tab-event" class="events-btn" type="button">Plan an Event</button>
+            </div>
         </div>
 
         <div class="main-content">
-            
-            <div class="form-btns">
-                <button id="tab-table" class="table-btn active" type="button">Book a Table</button>
-                <button id="tab-event" class="events-btn" type="button">Plan an Event</button>
-            </div>
 
-            <div class="form-box-wrapper">
+            <div class="form">
                 <form id="reservation-form">
                     
                     <div class="form-identity-section">
                         <h4 class="title">Contact Information</h4>
                         
                         <div class="input-group">
-                            <label for="first-name">First Name:</label>
+                            <label for="first-name">First Name:</label><br>
                             <input type="text" id="first-name" placeholder="Enter First Name" required>
                         </div>
                         
                         <div class="input-group">
-                            <label for="last-name">Last Name:</label>
+                            <label for="last-name">Last Name:</label><br>
                             <input type="text" id="last-name" placeholder="Enter Last Name" required>
                         </div>
                         
                         <div class="input-group">
-                            <label for="client-phone">Phone Number:</label>
+                            <label for="client-phone">Phone Number:</label><br>
                             <input type="tel" id="client-phone" placeholder="e.g. +254 700 000 000" required pattern="[0-9+]*" minlength="9">
                         </div>
                     </div>
@@ -74,17 +75,20 @@
                         <h4 class="title">Table Selection</h4>
                         
                         <div class="input-group">
-                            <label for="table-guests">Number of Guests:</label>
+                            <label for="table-guests">Number of Guests:</label> <br>
                             <select id="table-guests">
                                 <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
                                 <option value="4">4 Guests</option>
+                                <option value="2">5 Guests</option>
                                 <option value="6">6 Guests</option>
-                                <option value="large">7+ (Requires calling)</option>
+                                <option value="2">7 Guests</option>
+                                <option value="large">8+ (Requires calling)</option>
                             </select>
                         </div>
 
                         <div class="input-group">
-                            <label for="table-date">Select Date:</label>
+                            <label for="table-date">Select Date:</label><br>
                             <input type="date" id="table-date" required onkeydown="return false;">
                         </div>
                     </div>
@@ -93,22 +97,22 @@
                         <h4 class="title">Event Space Setup</h4>
                         
                         <div class="input-group">
-                            <label for="event-space">Select Space Layout:</label>
+                            <label for="event-space">Select Space Layout:</label><br>
                             <select id="event-space">
-                                <option value="bistro">The Cozy Bistro Lounge (Cap: 25)</option>
-                                <option value="main">The Main Dining Room (Cap: 35)</option>
+                                <option value="bistro">The Bistro (Cap: 30)</option>
+                                <option value="main">Main Hall (Cap: 75)</option>
                                 <option value="full">Full Venue Buy-out (Cap: 110)</option>
                             </select>
                         </div>
 
                         <div class="input-group">
-                            <label for="event-date">Target Event Date:</label>
-                            <input type="date" id="event-date" required onkeydown="return false;">
+                            <label for="event-date">Target Event Date:</label><br>
+                            <input type="date" id="event-date" required onkeydown="return false;"><br><br>
                         </div>
                     </div>
 
                     <div class="form-action-wrapper">
-                        <button type="submit" class="submit-booking-btn">Confirm Request</button>
+                        <button type="submit" class="submit-btn">Confirm Request</button>
                     </div>
 
                 </form>
