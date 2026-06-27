@@ -1,19 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intial scale=1.0">
-        <title>Reservations</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="page-wrap">
-            <div class="header">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservations | Fork & Knife</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrap">
+        
+        <div class="header">
             <h1>Fork & Knife | Restaurant and Bistro</h1>
+        </div>
+
+        <div class="sidebar">
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="menu-toggle-btn">&#9776; Navigate </label> 
+            <nav class="nav">
+                <label for="nav-toggle" class="menu-close-btn">&times;</label>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="menu.html">Our Menu</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-story">
+                <h3>OUR STORY</h3>
+                <p>Fork & Knife blends rich East African culinary traditions with sophisticated European techniques. Born in Nairobi, we celebrate heritage on every plate.</p>
+            </div>
+
+            <div class="sidebar-hours">
+                <h3>HOURS</h3>
+                <p><strong>Mon - Thu:</strong> 11:00 AM - 10:00 PM</p>
+                <p><strong>Fri - Sun:</strong> 11:00 AM - 11:00 PM</p>
             </div>
         </div>
+
+        <div class="main-content">
+            
+            <div class="form-btns">
+                <button id="tab-table" class="table-btn active" type="button">Book a Table</button>
+                <button id="tab-event" class="events-btn" type="button">Plan an Event</button>
+            </div>
+
+            <div class="form-box-wrapper">
+                <form id="reservation-form">
+                    
+                    <div class="form-identity-section">
+                        <h4 class="title">Contact Information</h4>
+                        
+                        <div class="input-group">
+                            <label for="first-name">First Name:</label>
+                            <input type="text" id="first-name" placeholder="Enter First Name" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="last-name">Last Name:</label>
+                            <input type="text" id="last-name" placeholder="Enter Last Name" required>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="client-phone">Phone Number:</label>
+                            <input type="tel" id="client-phone" placeholder="e.g. +254 700 000 000" required pattern="[0-9+]*" minlength="9">
+                        </div>
+                    </div>
+
+                    <hr class="form-divider">
+
+                    <div id="table-fields-block" class="form-conditional-block">
+                        <h4 class="title">Table Selection</h4>
+                        
+                        <div class="input-group">
+                            <label for="table-guests">Number of Guests:</label>
+                            <select id="table-guests">
+                                <option value="2">2 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="6">6 Guests</option>
+                                <option value="large">7+ (Requires calling)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="table-date">Select Date:</label>
+                            <input type="date" id="table-date" required onkeydown="return false;">
+                        </div>
+                    </div>
+
+                    <div id="event-fields-block" class="form-conditional-block hidden-element">
+                        <h4 class="title">Event Space Setup</h4>
+                        
+                        <div class="input-group">
+                            <label for="event-space">Select Space Layout:</label>
+                            <select id="event-space">
+                                <option value="bistro">The Cozy Bistro Lounge (Cap: 25)</option>
+                                <option value="main">The Main Dining Room (Cap: 35)</option>
+                                <option value="full">Full Venue Buy-out (Cap: 110)</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="event-date">Target Event Date:</label>
+                            <input type="date" id="event-date" required onkeydown="return false;">
+                        </div>
+                    </div>
+
+                    <div class="form-action-wrapper">
+                        <button type="submit" class="submit-booking-btn">Confirm Request</button>
+                    </div>
+
+                </form>
+            </div> </div> </div> <script>
+        const tabTable = document.getElementById('tab-table');
+        const tabEvent = document.getElementById('tab-event');
+        const tableBlock = document.getElementById('table-fields-block');
+        const eventBlock = document.getElementById('event-fields-block');
+        const masterForm = document.getElementById('reservation-form');
         
+        const tableDateInput = document.getElementById('table-date');
+        const eventDateInput = document.getElementById('event-date');
 
-    </body>
+        function enforceCurrentDates() {
+            const today = new Date();
+            const yyyy = today.getFullYear();
+            let mm = today.getMonth() + 1;
+            let dd = today.getDate();
 
+            if (mm < 10) mm = '0' + mm;
+            if (dd < 10) dd = '0' + dd;
+
+            const formattedToday = `${yyyy}-${mm}-${dd}`;
+            tableDateInput.min = formattedToday;
+            eventDateInput.min = formattedToday;
+            tableDateInput.value = formattedToday;
+            eventDateInput.value = formattedToday;
+        }
+        enforceCurrentDates();
+
+        tabTable.addEventListener('click', function() {
+            tabTable.classList.add('active');
+            tabEvent.classList.remove('active');
+            tableBlock.classList.remove('hidden-element');
+            eventBlock.classList.add('hidden-element');
+        });
+
+        tabEvent.addEventListener('click', function() {
+            tabEvent.classList.add('active');
+            tabTable.classList.remove('active');
+            eventBlock.classList.remove('hidden-element');
+            tableBlock.classList.add('hidden-element');
+        });
+
+        masterForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const firstName = document.getElementById('first-name').value;
+            const isEventSelection = tabEvent.classList.contains('active');
+            const confirmedDate = isEventSelection ? eventDateInput.value : tableDateInput.value;
+            const typeString = isEventSelection ? "Private Event Consultation" : "Dining Table Booking";
+
+            alert(`Success! Thank you, ${firstName}.\nYour registration request for a ${typeString} on ${confirmedDate} has been sent. We will review availability and message you back shortly!`);
+            
+            masterForm.reset();
+            enforceCurrentDates();
+        });
+    </script>
+</body>
 </html>
