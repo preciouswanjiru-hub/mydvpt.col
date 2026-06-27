@@ -315,3 +315,17 @@ input[name="about-tabs"] {
     from { opacity: 0.5; }
     to { opacity: 1; }
 }
+
+.hidden-element{
+    display: none;
+}
+.reservations .page-wrap{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+.reservations .sidebar{
+    position: relative;
+    z-index: 10;
+}
+
