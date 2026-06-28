@@ -31,13 +31,14 @@
             
             <div class="sidebar-story">
                 <h3>Reservations</h3>
-                <p>Fork & Knife blends rich East African culinary traditions with sophisticated European techniques. Born in Nairobi, we celebrate heritage on every plate.</p>
+                <p>Fork & Knife blends rich East African culinary traditions with sophisticated
+                     European techniques. Born in Nairobi, we celebrate heritage on every plate.</p>
             </div>
 
             <div class="sidebar-hours">
                 <h3>HOURS</h3>
-                <p><strong>Mon - Thu:</strong> 11:00 AM - 10:00 PM</p>
-                <p><strong>Fri - Sun:</strong> 11:00 AM - 11:00 PM</p>
+                <p><strong>Mon - Fri:</strong> 9:00 AM - 10:00 PM</p>
+                <p><strong>Sat- Sun:</strong> 11:00 AM - 11:00 PM</p>
             </div>
             <div class="form-btns">
                 <h3>To book a table</h3>
@@ -171,8 +172,7 @@
             const confirmedDate = isEventSelection ? eventDateInput.value : tableDateInput.value;
             const typeString = isEventSelection ? "Private Event Consultation" : "Dining Table Booking";
 
-            alert(`Success! Thank you, ${firstName}.\nYour registration request for a ${typeString} on ${confirmedDate}
-             has been sent.`);
+            alert(`Success! Thank you, ${firstName}.\nYour registration request for a ${typeString} on ${confirmedDate} has been sent.`);
             
             masterForm.reset();
             enforceCurrentDates();
