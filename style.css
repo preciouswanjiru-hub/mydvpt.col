@@ -335,9 +335,7 @@ input[name="about-tabs"] {
    height: auto;
    object-fit: cover; 
 }
-.main-content-menu{
-     overflow-y:auto;
-}
+
 .gallery{
     height:600px;          
     overflow-y:auto;       
@@ -351,6 +349,7 @@ input[name="about-tabs"] {
     gap:20px;
     margin-bottom:40px;
 }
+
 
 .photo-grid img{
     width:100%;
