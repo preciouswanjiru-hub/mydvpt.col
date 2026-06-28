@@ -335,3 +335,16 @@ input[name="about-tabs"] {
    height: auto;
    object-fit: cover; 
 }
+.gallery{
+    background-color: #f9f6f0;
+    border: 2px solid #dfb76c;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+
+
+}
