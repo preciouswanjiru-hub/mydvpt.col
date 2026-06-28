@@ -355,5 +355,11 @@ input[name="about-tabs"] {
     object-fit:cover;
     border-radius:8px;
 }
+.footer{
+    background-color:#dfb76c;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
 
 
