@@ -328,12 +328,15 @@ input[name="about-tabs"] {
     position: relative;
     z-index: 10;
 }
-.logo img, .media-team img{
+.logo img, .media-team img, .menu-img{
    display: block;
    width: 100%;
    max-width: 100%;
    height: auto;
    object-fit: cover; 
+}
+.main-content-menu{
+     overflow-y:auto;
 }
 .gallery{
     height:600px;          
